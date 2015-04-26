@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/tuto.css" rel="stylesheet">
+  </head>
+  <body>
+
+<nav class="navbar navbar-inverse" role="navigation">   
+  <div class="navbar-header">   
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Les Tigres</a>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li> <a href="#">Accueil</a> </li>
+      <li class="dropdown"> 
+        <a data-toggle="dropdown" href="#">Témoignages <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Dompteurs</a></li>
+          <li><a href="#">Zoos</a></li>
+          <li><a href="#">Chasseurs</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Autres témoignages</a></li>
+        </ul>
+      </li> 
+      <li> <a href="#">Liens</a> </li>
+      <li> <a href="#">Références</a> </li>
+    </ul>
+    <form class="navbar-form navbar-right" role="form">
+      <div class="input-group">
+        <input type="text" style="width:150px" class="input-sm form-control" placeholder="Recherche">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+          </span>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+<!-- Bouton execution modal -->
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	  Lancer la modal
+	</button>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	</div>
+	<div class="modal-body">
+	Exemple de modal
+	</div>
+	</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+    <div class="container">
+      <div class="row">
+      
+	<div class="col-lg-12">
+
+
+	<div class="jumbotron">
+	  <h1>Coucou</h1>
+	  <p>et bonjour</p>
+	</div>
+
+	
+		<div class="row">	
+			<div class="col-lg-8">4 colonnes</div>
+	                <div class="col-lg-4">4 colonnes</div>
+		</div>
+	</div>
+
+      </div>
+ </div>
+	<a href="#">Messages recus <span class="badge">42</span></a>
+
+	<div class="alert span5 alert-info">
+	    <h3>Information importante!</h3>
+		L'utilisation de la classe <strong>alert</strong> n'est pas sans danger pour les yeux fatigués des pauvres internautes, 
+et je vous demande instamment de l'utiliser avec parcimonie...
+	</div>
+
+
+  </body>
+</html>

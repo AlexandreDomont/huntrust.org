@@ -1,0 +1,14 @@
+body {
+  padding-top: 10px;
+}
+[class*="col-"], footer {
+  background-color: white;
+  border: 0px solid grey;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.h2 {
+color: 	black;
+}
