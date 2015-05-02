@@ -41,23 +41,30 @@ html = """
 
   <body>
 
-      <div class="container">
+	<div class="container">
 
-	<div class="header clearfix">
-	<div id="menu"></div>
-                <script>
-                $( "#menu" ).load( "../templates/menu.html" );
-                </script>
+		<div class="header clearfix">
+		<div id="menu"></div>
+                	<script>
+                		$( "#menu" ).load( "../templates/menu.html" );
+                	</script>
+		</div>
+      		</div>
 	</div>
-      </div>
 
-    <div class="container">
+	<div class="container">
+      	<div class="blog-header">
+        	<h1 class="blog-title">Result search %(keys)s </h1>
+      	</div>
 
-   <p>
-      Keys: %(keys)s<br>
-      Result : %(result)s<br>
-      Artciles : %(search)s
-   </p>
+      	<div class="row">
+	   <p>
+	      Keys: %(keys)s<br>
+	      Result : %(result)s<br>
+	      Artciles : %(search)s
+	   </p>
+	</div>
+
 	</div><!-- /.container -->
 
    </body>
@@ -95,7 +102,7 @@ def application(environ, start_response):
 	oui = 'Non'	
 ##
    out = []
-   for f in glob.iglob("/var/www/bootstrap/articles/*.html"): # generator, search immediate subdirectories 
+   for f in glob.iglob("/var/www/huntrust/blog/articles/*.html"):  
    	out.append(f)
 
 ##

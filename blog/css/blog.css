@@ -85,8 +85,9 @@ h6, .h6 {
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: normal;
+  color: #006699;
 }
 .blog-description {
   font-size: 20px;
