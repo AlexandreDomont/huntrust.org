@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+
+#from wsgiref.simple_server import make_server
+from cgi import parse_qs, escape, os
+import os.path, sys, glob
+
+html = """
+<html>
+<body>
+   <p>
+      Keys: %(keys)s<br>
+      Result : %(result)s<br>
+      Artciles : %(search)s
+   </p>
+   </body>
+</html>
+"""
+
+def application(environ, start_response):
+
+   # the environment variable CONTENT_LENGTH may be empty or missing
+   try:
+      request_body_size = int(environ.get('CONTENT_LENGTH', 0))
+   except (ValueError):
+      request_body_size = 0
+
+   # When the method is POST the query string will be sent
+   # in the HTTP request body which is passed by the WSGI server
+   # in the file like wsgi.input environment variable.
+   request_body = environ['wsgi.input'].read(request_body_size)
+   d = parse_qs(request_body)
+
+   keys = d.get('keys', [''])[0] # Returns the first age value.
+
+   # Always escape user input to avoid script injection
+   keys = escape(keys)
+
+##
+   #keyword_list = ['motorcycle', 'bike', 'cycle', 'dirtbike', "long"]
+   keyword_list = keys.lower()
+   keyword_list = keyword_list.split()
+   all_text = 'DNS'
+   all_text = all_text.lower()
+   if set(keyword_list).intersection(all_text.split()):
+	oui = 'Oui'
+   else:
+	oui = 'Non'	
+##
+   out = []
+   for f in glob.iglob("/var/www/bootstrap/articles/*.html"): # generator, search immediate subdirectories 
+   	out.append(f)
+
+##
+
+   response_body = html % {
+	'keys': keys or 'Empty', 
+	'result': oui, 
+	'search': '\n <br>'.join(out),
+	}
+
+   status = '200 OK'
+
+   response_headers = [('Content-Type', 'text/html'),
+                  ('Content-Length', str(len(response_body)))]
+   start_response(status, response_headers)
+
+   return [response_body]
