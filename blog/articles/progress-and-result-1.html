@@ -76,19 +76,6 @@
 <!--Post-->
 
 
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
-
- <!-- Comments Form -->
-                <div class="well">
-                    <h4>Leave a Comment: write me (see Contact)</h4>
-                </div>
-
-
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
@@ -105,16 +92,15 @@
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
-
     </div><!-- /.container -->
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-
+	<footer class="blog-footer">
+        <div id="footer"></div>
+         <script>
+                $( "#footer" ).load( "../templates/footer.html" );
+         </script>
+        </div>
+	</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
