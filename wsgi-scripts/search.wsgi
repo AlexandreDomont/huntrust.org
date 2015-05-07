@@ -55,6 +55,7 @@ html = """
 	<div class="container">
       	<div class="blog-header">
         	<h1 class="blog-title">Result search :  %(keys)s </h1>
+		<p>Explain how work search</p>
       	</div>
 
       	<div class="row">
