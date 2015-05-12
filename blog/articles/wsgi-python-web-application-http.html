@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="I describe stages of progress.">
+    <meta name="description" content="modwsgi - WSGI interface - Apache">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Progress and result</title>
+    <title>Implemantation modwsgi - WSGI interface - Apache</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/hunt.css" rel="stylesheet">
-
 
     <!-- Custom styles for this template -->
     <link href="../css/blog.css" rel="stylesheet">
@@ -45,54 +44,88 @@
 
     <div class="container">
 
-      <div class="blog-header">
-        <h1 class="blog-title">Progress and result </h1>
-        <p class="lead blog-description">I describe stages of progress.</p>
-      </div>
+	<div class="blog-header">
+        </div>
 
       <div class="row">
 
         <div class="col-sm-8 blog-main">
 
-	<div class="blog-post">
-            <h2 class="blog-post-title">Docker.io</h2>
-            <p class="blog-post-meta"> May 12, 2015 by <a href="#">Alex</a></p>
-            <p>VPS, Docker.io, conf Apache, SSL</p>
-        </div>
-
-
-	 <div class="blog-post">
-            <h2 class="blog-post-title">Full IPv6 or not ?</h2>
-            <p class="blog-post-meta"> May 12, 2015 by <a href="#">Alex</a></p>
-            <p>Which impact on SEO and security if implemente IPv6.... </p>
-        </div><!-- /.blog-post -->
-
 
 	<div class="blog-post">
-            <h2 class="blog-post-title">Search section</h2>
-            <p class="blog-post-meta"> May 3, 2015 by <a href="#">Alex</a></p>
+            <h2 class="blog-post-title">Implementation WSGI interface</h2>
+            <p class="blog-post-meta"> May 7, 2015 by <a href="#">Alex</a></p>
 
-	    <p>Begin 29 april and stop 3 may </p>
-	    <p>I describe here wsgi and Python with attach aticle</p>
-            <p>I don't want to use script for post transation so i serch a solution more simple...like python or whatever....</p>
+		<p>----------
+		Python programmation for web
+		Support module for Common Gateway Interface (CGI) scripts
+		https://docs.python.org/2/library/cgi.html
+		----------</p>
+
+		<p>----------
+		Python WSGI adapter module for Apache.		
+		https://groups.google.com/forum/#!forum/modwsgi
+		https://code.google.com/p/modwsgi/
+		------------</p>
+
+		<p>----------
+		install et conf Apache mod-wsgi
+		------------</p>
+
+		<p>Nginx : https://uwsgi-docs.readthedocs.org/en/latest/Nginx.html</p>
+
+		<p>ab -n 10000 http://127.0.0.1</p>
+
+		<p>I use those two procedures for creat and add ssh key </p>
+		<ul>
+		<li><a href="https://help.github.com/articles/create-a-repo/">create-a-repo</a></li>
+		<li><a href="https://help.github.com/articles/generating-ssh-keys/">generating-ssh-keys</a></li>
+		</ul>
+
+		
+		<p>Then push still ask username...</p>
+
+		<p>Check configuration repo</p>
+
+		<pre><code>git remote -v</code></pre>
+
+		<p>And for not add username when push, but use key SSH, add this :</p>
+
+		<pre><code>git remote set-url origin git@github.com:AlexandreDomont/huntrust.org.git</code></pre>
+
+
+		<p>Result</p>
+
+		<pre><code>git remote -v
+origin	git@github.com:AlexandreDomont/huntrust.org.git (fetch)
+origin	git@github.com:AlexandreDomont/huntrust.org.git (push)</code></pre>
+	
+		<p>Go ...</p>
+
+		<pre><code>git push origin master</code></pre>
+
+		<p>A example :</p>
+
+		
+		<pre><code>git add .;git commit -am 'push article github version 00'
+[master cd9e677] push article github version 00
+ 2 files changed, 117 insertions(+)
+ create mode 100644 blog/articles/.github.html.swp
+ create mode 100644 blog/articles/github.html</code></pre>
+
+
+<pre><code>git push origin master
+Warning: Permanently added the RSA host key for IP address '192.30.252.00' to the list of known hosts.
+Décompte des objets: 6, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (6/6), fait.
+Écriture des objets: 100% (6/6), 3.50 KiB | 0 bytes/s, fait.
+Total 6 (delta 3), reused 0 (delta 0)
+To git@github.com:AlexandreDomont/huntrust.org.git
+   d10d236..cd9e677  master -> master</code></pre>
+
+	
 	</div><!-- /.blog-post -->
-
-<!--Post-->
-          <div class="blog-post">
-            <h2 class="blog-post-title">Comment section blog</h2>
-            <p class="blog-post-meta"> April 27, 2015 by <a href="#">Alex</a></p>
-
-            <p>I don't want to use script for post transation so i serch a solution more simple...like python or whatever....</p>
-	    <p> After any search solutions, I decide to give up comments on this blog. Because, I want to keep a simple technology. If I want to develop comment, I could lead read, write and get data to the complexe programming. The bug is more accetable. And finaly, idee is good. develop philisophy. I will publicat best comment I recive by mail. SPAM</p>
-
-          </div><!-- /.blog-post -->
-<!--Post-->
-
-	<div class="blog-post">
-            <h2 class="blog-post-title">Github</h2>
-            <p class="blog-post-meta"> April 26, 2015 by <a href="#">Alex</a></p>
-            <p>Decide to creat Githob repo for get code blog : artciles....</p>
-        </div>
 
 
         </div><!-- /.blog-main -->
@@ -111,15 +144,17 @@
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
+
     </div><!-- /.container -->
 
-	<footer class="blog-footer">
-        <div id="footer"></div>
-         <script>
+    <footer class="blog-footer">
+	<div id="footer"></div>
+	 <script>
                 $( "#footer" ).load( "../templates/footer.html" );
          </script>
-        </div>
-	</footer>
+	</div>
+    </footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

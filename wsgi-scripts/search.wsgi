@@ -17,7 +17,7 @@ html = """
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>Huntrust</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -55,14 +55,14 @@ html = """
 	<div class="container">
       	<div class="blog-header">
         	<h1 class="blog-title">Result search :  %(keys)s </h1>
-		<p>Explain how work search</p>
+		<p>The search algorithm tests whether a keyword is found in the description of each articles.</br>  It is not very elaborated but it is a good start. </p>
       	</div>
 
       	<div class="row">
 	<div class="col-sm-8 blog-main">
 	   <p>
 	      Keys: %(keys)s<br>
-	      Artciles : <br>%(search)s
+	      Articles : <br>%(search)s
 	   </p>
 	</div>
 	</div>
