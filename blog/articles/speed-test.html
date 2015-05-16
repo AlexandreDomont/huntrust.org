@@ -47,58 +47,34 @@
 
         <div class="col-sm-8 blog-main">
 
-
 	<div class="blog-post">
-            <h2 class="blog-post-title">Creat repo Github and Push code with ssh key</h2>
-            <p class="blog-post-meta"> May 7, 2015 by <a href="#">Alex</a></p>
+            <h2 class="blog-post-title">Speed test 1</h2>
+            <p class="blog-post-meta"> May 16, 2015 by <a href="#">Alex</a></p>
 
-		<p>I use those two procedures for creat and add ssh key </p>
-		<ul>
-		<li><a href="https://help.github.com/articles/create-a-repo/">create-a-repo</a></li>
-		<li><a href="https://help.github.com/articles/generating-ssh-keys/">generating-ssh-keys</a></li>
-		</ul>
+		<pre><code>
+ab -t 30 -c 5 http://huntrust.org/
 
-		<p>Then push still ask username...</p>
+POINTROOT
+Requests per second:    2.53 [#/sec] (mean)
+Time per request:       1979.074 [ms] (mean)
+Time per request:       395.815 [ms] (mean, across all concurrent requests)
 
-		<p>Check configuration repo</p>
+huntrust
+Requests per second:    21.04 [#/sec] (mean)
+Time per request:       237.648 [ms] (mean)
+Time per request:       47.530 [ms] (mean, across all concurrent requests)
 
-		<pre><code>git remote -v</code></pre>
+nicolargo
+Requests per second:    7.26 [#/sec] (mean)
+Time per request:       688.996 [ms] (mean)
+Time per request:       137.799 [ms] (mean, across all concurrent requests)
 
-		<p>And for not add username when push, but use key SSH, add this :</p>
+veryswing
+Requests per second:    65.17 [#/sec] (mean)
+Time per request:       76.721 [ms] (mean)
+Time per request:       15.344 [ms] (mean, across all concurrent requests)
 
-		<pre><code>git remote set-url origin git@github.com:AlexandreDomont/huntrust.org.git</code></pre>
-
-
-		<p>Result</p>
-
-		<pre><code>git remote -v
-origin	git@github.com:AlexandreDomont/huntrust.org.git (fetch)
-origin	git@github.com:AlexandreDomont/huntrust.org.git (push)</code></pre>
-	
-		<p>Go ...</p>
-
-		<pre><code>git push origin master</code></pre>
-
-		<p>A example :</p>
-
-		
-		<pre><code>git add .;git commit -am 'push article github version 00'
-[master cd9e677] push article github version 00
- 2 files changed, 117 insertions(+)
- create mode 100644 blog/articles/.github.html.swp
- create mode 100644 blog/articles/github.html</code></pre>
-
-
-<pre><code>git push origin master
-Warning: Permanently added the RSA host key for IP address '192.30.252.00' to the list of known hosts.
-Décompte des objets: 6, fait.
-Delta compression using up to 4 threads.
-Compression des objets: 100% (6/6), fait.
-Écriture des objets: 100% (6/6), 3.50 KiB | 0 bytes/s, fait.
-Total 6 (delta 3), reused 0 (delta 0)
-To git@github.com:AlexandreDomont/huntrust.org.git
-   d10d236..cd9e677  master -> master</code></pre>
-
+		</code></pre>
 	
 	</div><!-- /.blog-post -->
 
