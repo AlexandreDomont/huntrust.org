@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Creat and push SSH key repo into github">
+    <meta name="description" content="Create and push SSH key repo into github">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Creat repository Github and push with ssh key</title>
+    <title>Create repository Github and push with ssh key</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -20,7 +20,6 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,11 +52,55 @@
 
 
 	<div class="blog-post">
-            <h2 class="blog-post-title">Search engine optimization</h2>
+            <h2 class="blog-post-title">Create repo Github and Push code with ssh key</h2>
             <p class="blog-post-meta"> May 7, 2015 by <a href="#">Alex</a></p>
 
-	 <p>Le passer à W3C controle et SSL check, RSS</p>
-         <p>Algo Google favorise les interfaces Mobile : http://frenchweb.fr/le-nouvel-algorithme-mobile-friendly-de-google-un-ultimatum-qui-ne-dit-pas-son-nom/191432</p>
+		<p>I use those two procedures for create and add ssh key </p>
+		<ul>
+		<li><a href="https://help.github.com/articles/create-a-repo/">create-a-repo</a></li>
+		<li><a href="https://help.github.com/articles/generating-ssh-keys/">generating-ssh-keys</a></li>
+		</ul>
+
+		<p>Then push still ask username...</p>
+
+		<p>Check configuration repo</p>
+
+		<pre><code>git remote -v</code></pre>
+
+		<p>And for not add username when push, but use key SSH, add this :</p>
+
+		<pre><code>git remote set-url origin git@github.com:AlexandreDomont/huntrust.org.git</code></pre>
+
+
+		<p>Result</p>
+
+		<pre><code>git remote -v
+origin	git@github.com:AlexandreDomont/huntrust.org.git (fetch)
+origin	git@github.com:AlexandreDomont/huntrust.org.git (push)</code></pre>
+	
+		<p>Go ...</p>
+
+		<pre><code>git push origin master</code></pre>
+
+		<p>A example :</p>
+
+		
+		<pre><code>git add .;git commit -am 'push article github version 00'
+[master cd9e677] push article github version 00
+ 2 files changed, 117 insertions(+)
+ create mode 100644 blog/articles/.github.html.swp
+ create mode 100644 blog/articles/github.html</code></pre>
+
+
+<pre><code>git push origin master
+Warning: Permanently added the RSA host key for IP address '192.30.252.00' to the list of known hosts.
+Décompte des objets: 6, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (6/6), fait.
+Écriture des objets: 100% (6/6), 3.50 KiB | 0 bytes/s, fait.
+Total 6 (delta 3), reused 0 (delta 0)
+To git@github.com:AlexandreDomont/huntrust.org.git
+   d10d236..cd9e677  master -> master</code></pre>
 
 	
 	</div><!-- /.blog-post -->
