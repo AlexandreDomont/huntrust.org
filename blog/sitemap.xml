@@ -4,13 +4,16 @@
 <loc>http://huntrust.org/</loc>
 </url>
 <url>
-<loc>http://huntrust.org/about.html</loc>
+<loc>http://huntrust.org/about-alexandre-domont.html</loc>
 </url>
 <url>
 <loc>http://huntrust.org/articles/hosting-docker-boostrap.html</loc>
 </url>
 <url>
 <loc>http://huntrust.org/articles/create-repository-github-push-ssh-key.html</loc>
+</url>
+<url>
+<loc>http://huntrust.org/articles/create-sitemap-robot-for-crawlers.html</loc>
 </url>
 <url>
 <loc>http://huntrust.org/articles/progress-and-result-1.html</loc>

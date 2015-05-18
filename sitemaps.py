@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-from cgi import parse_qs, escape, os
-import os.path, sys, glob, re, fnmatch
+import os.path, sys, glob, re, os
 
 NomFichier = 'blog/sitemap.xml'
 Fichier = open(NomFichier,'w')
@@ -12,16 +11,11 @@ Fichier.write('\n<url>')
 Fichier.write('\n<loc>http://huntrust.org/</loc>')
 Fichier.write('\n</url>')
 Fichier.write('\n<url>')
-Fichier.write('\n<loc>http://huntrust.org/about.html</loc>')
+Fichier.write('\n<loc>http://huntrust.org/about-alexandre-domont.html</loc>')
 Fichier.write('\n</url>')
 
-
-
 for file in glob.iglob("/var/www/huntrust/blog/articles/*.html"):
-	        print file
         	article = file[32:]
-        	#out.append(article)
-		print article
 		Fichier.write('\n<url>')
 		Fichier.write('\n<loc>http://huntrust.org/articles/'+ article + '</loc>')
 		Fichier.write('\n</url>')
