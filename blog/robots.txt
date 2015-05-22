@@ -1,1 +1,1 @@
-Sitemap: http://huntrust/sitemap.xml
+Sitemap: http://huntrust.org/sitemap.xml
