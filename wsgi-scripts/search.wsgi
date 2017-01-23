@@ -108,7 +108,7 @@ def application(environ, start_response):
 #   	out.append(f)
 ##
 
-   for file in glob.iglob("/var/www/huntrust/blog/articles/*.html"):
+   for file in glob.iglob("/var/www/html/blog/articles/*.html"):
 	        #print file
         	article = file[32:]
         	#out.append(article)
