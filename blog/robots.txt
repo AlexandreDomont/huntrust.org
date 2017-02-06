@@ -1,1 +1,1 @@
-Sitemap: http://huntrusted.org/sitemap.xml
+Sitemap: http://domont.org/sitemap.xml
